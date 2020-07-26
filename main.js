@@ -91,8 +91,8 @@ const fetchPokeData = (id) => {
 
       pokeName.textContent = capitalize(data["name"]);
       pokeId.textContent = "#" + data["id"].toString().padStart(3, "0");
-      pokeWeight.textContent = data["weight"];
-      pokeHeight.textContent = data["height"];
+      pokeWeight.textContent = data["weight"] / 10 + " kg";
+      pokeHeight.textContent = data["height"] / 10 + " m";
       pokeFrontImage.src = data["sprites"]["front_default"] || "";
       pokeBackImage.src = data["sprites"]["back_default"] || "";
     });
